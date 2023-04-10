@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站收首页</title>
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html {
+            font-size: 26.666667vw;
+        }
+        
+        .pug-header {
+            padding: 0 0.15rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+            z-index: 1000;
+        }
+        
+        .pug-header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .pug-header .search {
+            font-size: .24rem;
+            color: #ccc;
+        }
+        
+        .pug-header .avatar {
+            width: .24rem;
+            height: .24rem;
+            padding: 0 .2rem;
+            border-radius: 50%;
+        }
+        
+        .pug-header .downbtn {
+            background: #fb7299;
+            color: #fff;
+            border: 0;
+            padding: .035rem 0.07rem;
+            border-radius: .16rem;
+            font-size: .12rem;
+        }
+        
+        .pug-header .rbox {
+            display: flex;
+            align-items: center;
+        }
+        
+        .pug-nav {
+            margin-top: 0.01rem;
+            border-bottom: 0.01rem solid #faf9f9;
+            padding: 0.1rem 0;
+        }
+        
+        .pug-nav-list {
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+        }
+        
+        .pug-nav-list li {
+            flex-shrink: 0;
+            position: relative;
+            font-size: 0.15rem;
+        }
+        
+        .pug-nav-list li a {
+            display: block;
+            padding: 0 0.22rem 0.1rem 0;
+            color: #333;
+        }
+        
+        .pug-nav-list li.active::after {
+            content: "";
+            display: block;
+            height: 2px;
+            background: #fb7299;
+            position: absolute;
+            width: 50%;
+            left: 0;
+            bottom: 0;
+        }
+        
+        .pug-nav-list li.active a {
+            color: #fb7299;
+        }
+        
+        .pug-content {
+            padding: .1rem;
+            margin-top: 0.8rem;
+        }
+        
+        .pug-content-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: .1rem;
+        }
+        
+        .pug-content-wrapper .content-item {
+            margin-bottom: 0.15rem;
+        }
+        
+        .pug-content-wrapper .content-item h3 {
+            font-size: 0.1rem;
+            color: #333;
+            font-weight: 400;
+        }
+        
+        .tit {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .pug-content-wrapper .content-item .imgbox {
+            position: relative;
+        }
+        
+        .pug-content-wrapper .content-item .imgbox .inbox {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            font-size: 0.12rem;
+            padding: 0 0.05rem 0.07rem;
+            justify-content: space-between;
+            color: #fff;
+        }
+        
+        .pug-content-wrapper .content-item .imgbox img {
+            width: 100%;
+        }
+        
+        .pug-content-wrapper .content-item .imgbox span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .pug-content-wrapper .content-item .imgbox span i {
+            padding-right: 0.04rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pug-header">
+        <div class="pug-header-wrapper">
+            <img src="images/logo.png" class="logo">
+            <div class="rbox">
+                <i class="search iconfont icon-search"></i>
+                <img class="avatar" src="images/avatar.png" alt="">
+                <button class="downbtn">下载APP</button>
+            </div>
+        </div>
+
+        <div class="pug-nav">
+            <ul class="pug-nav-list">
+                <li class="active"><a href="">首页</a></li>
+                <li><a href="">动画</a></li>
+                <li><a href="">番剧</a></li>
+                <li><a href="">国创</a></li>
+                <li><a href="">音乐</a></li>
+                <li><a href="">舞台剧</a></li>
+                <li><a href="">舞台剧</a></li>
+                <li><a href="">舞台剧</a></li>
+                <li><a href="">舞台剧</a></li>
+                <li><a href="">舞台剧</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pug-content">
+        <div class="pug-content-wrapper">
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3 class="tit">【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+            <div class="content-item">
+                <div class="imgbox">
+                    <img src="images/1.png" alt="">
+                    <div class="inbox">
+                        <span><i class="iconfont icon-play"></i> 1441.3万</span>
+                        <span><i class="iconfont icon-mulu"></i> 13.1万</span>
+                    </div>
+                </div>
+                <h3>【罗翔】令人愤怒的唐山打人案涉及什么犯罪</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
